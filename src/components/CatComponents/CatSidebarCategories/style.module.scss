@@ -1,0 +1,47 @@
+@import "src/assets/scss/variables";
+
+.catSideBarDiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: #f1f1f1;
+}
+
+.listEl {
+  list-style-type: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.activeListEl {
+  color: $redMainColor;
+}
+
+@media screen and (max-width: $screen-sm){
+  .catSideBarDiv {
+    right: 0;
+    width: 100%;
+    overflow: scroll;
+    height: fit-content;
+    max-height: 80px;
+    padding: 8px 0;
+  }
+
+  .listDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .listEl {
+    margin: 10px !important;
+  }
+}

@@ -1,0 +1,33 @@
+@import "src/assets/scss/variables";
+
+.mainCatListDiv {
+  padding: 110px 30px 30px 30px; // 110 is 80px for max height of categories div + 30px padding
+
+  @media screen and (min-width: $screen-sm){
+    padding: 30px 30px 30px 330px;
+  }
+}
+
+.listItemsDiv {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-gap: 20px;
+}
+
+.imageDiv {
+  width: 100%;
+  height: 200px;
+  box-shadow: 5px 5px 15px 5px #cccccc;
+  border-radius: 8px;
+  overflow: hidden;
+
+  > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loadMoreBtn {
+  padding-top: 30px;
+}
